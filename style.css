@@ -4,6 +4,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -452,6 +453,7 @@ header .master_play .vol input{
      width: 100%;
      height: 300px;
      background: url('img/bg.png');
+     opacity: 0.4;
      z-index: -1;
  }
  header .song_side nav{
@@ -510,6 +512,7 @@ header .master_play .vol input{
  header .song_side nav .search .bi{
     font-size: 13px;
     padding: 3px 0px 0px 10px;
+    cursor: pointer;
  }
  header .song_side nav .search input{
     background: none;
@@ -522,10 +525,11 @@ header .master_play .vol input{
 
  header .song_side nav h4{
     position: relative;
+    margin-right: 74px;
     width: 150px;
     height: 40px;
     cursor: pointer;
-    top:25px;
+    top:15px;
     left: 120px;
     font-size: large;
     
@@ -544,16 +548,16 @@ header .master_play .vol input{
  }
  header .song_side nav .user img{
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     box-shadow: 2px 2px 8px #131312;
  }
 
  header .song_side nav .user::before{
     content: '';
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     border:3px solid #36e2ec;
     border-radius: 50%;
