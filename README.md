@@ -1,2 +1,2 @@
 # MUSIC_ARC
-MUSIC_ARC is an audio streaming web application under development.
+MUSIC ARC is an audio streaming web application under development.
