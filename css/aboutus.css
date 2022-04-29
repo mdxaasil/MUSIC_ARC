@@ -1,0 +1,229 @@
+@import url(http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Tapestry', cursive;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background : #161623;
+    min-height: 100vh;   
+}
+
+
+#logo {
+    width: 65px;
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+
+
+section{
+
+    position: relative;
+}
+
+section::before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#f00, #f0f);
+    clip-path: circle(20% at right 80%);
+}
+
+.navbar{
+    position:relative;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+section::after{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#2196f3, #a41fe2);
+    clip-path: circle(20% at left 80%);
+}
+
+.menu-bar {
+    border-radius: 25px;
+    height: fit-content;
+    width: 100%;
+    display: inline-flex;
+    background-color: #212134;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    padding: 0 10px;
+    margin: 50px 0 0 0;
+}
+.menu-bar .li {
+    list-style: none;
+    color: white;
+    font-family: 'Tapestry', cursive;
+    font-weight: 400;
+    padding: 12px 16px;
+    margin: 0 8px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.menu-bar .li::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.2s;
+    border-radius: 25px;
+}
+.menu-bar .li:hover {
+    color: black;
+}
+.menu-bar .li:hover::before {
+    background: linear-gradient(to bottom, #6d39a1, #520f5f);
+    box-shadow: 0px 3px 20px 0px rgb(148, 148, 148);
+    transform: scale(1.2);
+    font-size:18px;
+}
+
+li {
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0 8px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.container{
+   position: relative;
+   z-index: 1;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(255,255,255,0.05);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+
+}
+
+.container .card .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.5;
+    transition:0.5s;
+}
+
+.container .card:hover .content{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.container .card .content .imgBx{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(0,0,0,0.25);
+}
+
+.container .card .content .imgBx img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.container .card .content .contentBx h3{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight:500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+
+}
+
+.container .card .content .contentBx h3 span {
+
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+
+}
+
+.container .card .sci li{
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+}
+.container .card:hover .sci li{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card .sci li a{
+    color: #fff;
+    font-size: 24px;
+
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight:500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+
+}
