@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
+@import url(http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
+* {
+    padding:0%;
+    margin:0%;
+}
+body {
+    width:100%;
+    height:100vh;
+    background-color:#141413;
+    font-family:"Poppins",sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    width:85%;
+    height:95%;
+    /*border:1px solid white;*/
+    display:flex;
+}
+header .menu{
+    overflow:auto;
+    height:100%;
+    width:25%;
+    background-color: #111727;
+    /*border: 1px solid white;*/
+}
+header .song{
+    height:95%;
+    width:70%;
+    background-color: #181f35;
+    overflow:scroll;
+    display:flex;
+}
+header .menu h1{
+    font-size: 20px;
+    margin: 15px 0px 0px 20px;
+    font-weight: 500;
+    color:#ffffff;
+}
+header .menu .playlist h4{
+    margin:40px 0px 0px 20px;
+    font-size:14px;
+    font-weight:400;
+    color:#4c5262;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    transition: .3s linear;
+}
+header .menu .playlist h4:hover{
+    color:#ffffff;
+}
+header .menu .playlist h4 span{
+    position:relative;
+    margin-right: 35px;
+}
+header .menu .playlist h4 span::before{
+    content:'';
+    position:absolute;
+    width:4px;
+    height:5px;
+    border:2px solid #4c5262;
+    border-radius: 50%;
+    transition: .3s linear;
+}
+header .menu .playlist h4:hover span::before{
+    border:2px solid #ffffff;
+}
+header .menu .playlist h4 .bi{
+    display:none;
+}
+header .menu .playlist .active{
+    color: #36e2ec;
+}
+header .menu .playlist .active span{
+    display: none;
+}
+header .menu .playlist .active .bi{
+    display: flex;
+    margin-right: 20px;
+}
+header .song{
+    width:75%;
+    background-color: #181f35;
+    height:100%;
+}
+header .song table,tr,td{
+    /*border:1px solid white;*/
+    padding:35px 25px 35px 25px;
+}
+header div.desc {
+    text-align: center;
+  }
+header div.desc h5{
+    font-size: 20px;
+    color:#ffffff;
+}
+header div.desc .subtitle{
+    font-size: 15px;
+    color: #4c5262;
+}
+header table img{
+    width: 100px;
+    height:100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+header table {
+    border-collapse:collapse;
+    margin-left:50px;
+    margin-top: 40px;
+}
+header table td:hover img{
+    opacity: 0.3;
+    transition:0.3s linear;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #111727; 
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #212c4d; 
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}

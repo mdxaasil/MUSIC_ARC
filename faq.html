@@ -7,378 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <title>FAQs</title>
-
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-
-        body {
-            margin: 0;
-            padding: 0;
-            /* font-family: 'Hind', sans-serif; */
-            color: #4d4d4d;
-            /* display: flex; */
-            min-height: 100vh;
-            background-color: hsl(266, 55%, 15%);
-        }
-
-
-        nav {
-            font-family: 'Ubuntu', sans-serif;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a:hover {
-            font-size: 22px;
-            transition: 0.5s ease all 0.1s;
-            transition-delay: 0.1s;
-        }
-
-        nav ul {
-            display: flex;
-            align-items: center;
-            list-style-type: none;
-            height: 65px;
-            background-color: rgb(16, 7, 24);
-            color: white;
-        }
-
-        nav ul li {
-            padding: 0 12px;
-        }
-
-        .navbar {
-            /* position:relative; */
-            width: 100%;
-            height: 70px;
-
-            display: block;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        .menu-bar {
-            border-radius: 25px;
-            height: fit-content;
-            width: 100%;
-            display: inline-flex;
-            background-color: #525280;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            align-items: center;
-            padding: 0 10px;
-            margin: 50px 0 0 0;
-        }
-
-        .menu-bar .li {
-            list-style: none;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            padding: 12px 16px;
-            margin: 0 8px;
-            position: relative;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-
-        .menu-bar .li::before {
-            content: " ";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
-            transition: 0.2s;
-            border-radius: 25px;
-        }
-
-        .menu-bar .li:hover {
-            color: black;
-        }
-
-        .menu-bar .li:hover::before {
-            background: linear-gradient(to bottom, #9d81ba, #72407c);
-            box-shadow: 0px 3px 20px 0px rgb(148, 148, 148);
-            transform: scale(1.1);
-            font-size: 13px;
-        }
-
-        .search {
-            position: right;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            background-color: #525280;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
-            padding: 0 10px;
-            margin: 0px 0px 0px 520px;
-
-        }
-
-        .search input[type=text] {
-            width: 300px;
-            height: 25px;
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-
-        }
-
-        .search button {
-            background-color: #525280;
-            /* color: #f2f2f2; */
-            /* float: right; */
-            padding: 5px 10px;
-            margin-right: 16px;
-            font-size: 12px;
-            border: none;
-            cursor:default;
-        }
-        
-        .search button:hover {
-            background-color: #616196;
-            /* color: #f2f2f2; */
-            /* float: right; */
-            padding: 5px 10px;
-            margin-right: 16px;
-            font-size: 12px;
-            border: none;
-            cursor:default;
-            border-radius: 25px;
-            opacity: 0.8;
-        }
-
-        .search-icon{
-            height : 20px;
-       }
-
-        ::placeholder {
-            color: white;
-        }
-
-
-        .container2 {
-            border-style: outset;
-            border-width: 5px;
-            border-radius: 10px;
-            margin: -120px;
-            size: 200px;
-            padding: 2%;
-            width: 75rem;
-            position: absolute;
-            left: 20mm;
-            bottom: 2mm;
-            margin-left: 13%;
-        }
-
-
-
-        h2.black {
-            color: white;
-            font-size: 20;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        .faq .faq-item {
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .faq .faq-item button[aria-expanded='true'] {
-            border-bottom: 1px solid #03b5d2;
-        }
-
-        .faq button {
-            position: relative;
-            display: block;
-            text-align: left;
-            width: 100%;
-            padding: 1em 0;
-            color: #7288a2;
-            font-size: 1.15rem;
-            font-weight: 400;
-            border: none;
-            background: none;
-            outline: none;
-        }
-
-        .faq button:hover,
-        .faq button:focus {
-            cursor: pointer;
-            color: #03b5d2;
-        }
-
-        .faq button:hover::after,
-        .faq button:focus::after {
-            cursor: pointer;
-            color: #03b5d2;
-            border: 1px solid #03b5d2;
-        }
-
-        .faq button .faq-title {
-            padding: 1em 1.5em 1em 0;
-        }
-
-        .faq button .icon {
-            display: inline-block;
-            position: absolute;
-            top: 18px;
-            right: 0;
-            width: 22px;
-            height: 22px;
-            border: 1px solid;
-            border-radius: 22px;
-        }
-
-        .faq button .icon::before {
-            display: block;
-            position: absolute;
-            content: '';
-            top: 9px;
-            left: 5px;
-            width: 10px;
-            height: 2px;
-            background: currentColor;
-        }
-
-        .faq button .icon::after {
-            display: block;
-            position: absolute;
-            content: '';
-            top: 5px;
-            left: 9px;
-            width: 2px;
-            height: 10px;
-            background: currentColor;
-        }
-
-        .faq button[aria-expanded='true'] {
-            color: #03b5d2;
-        }
-
-        .faq button[aria-expanded='true'] .icon::after {
-            width: 0;
-        }
-
-        .faq button[aria-expanded='true']+.faq-content {
-            opacity: 1;
-            max-height: 9em;
-            transition: all 200ms linear;
-            will-change: opacity, max-height;
-        }
-
-        .faq .faq-content {
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: opacity 200ms linear, max-height 200ms linear;
-            will-change: opacity, max-height;
-        }
-
-        .faq .faq-content p {
-            font-size: 1rem;
-            font-weight: 300;
-            margin: 2em 0;
-        }
-
-        #logo {
-            width: 65px;
-            margin: 0 auto;
-            border-radius: 50px;
-        }
-
-
-
-
-       
-
-        .column {
-            float: left;
-            width: 25%;
-            padding: 0 40px;
-
-        }
-
-
-        .row {
-            margin: 0 -5px;
-            height : 500px;
-        
-            margin-top: 100px;
-            margin-left: 100px;
-            margin-bottom: 100px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Responsive columns */
-        @media screen and (max-width: 600px) {
-            .column {
-                width: 100%;
-                display: block;
-                margin-bottom: 20px;
-            }
-        }
-
-        .card {
-            /* position: relative; */
-            /* position: relative; */
-            width: 300px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.05);
-            margin: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            -webkit--backdrop-filter: blur(10px);
-
-        }
-
-        .card:hover {
-            box-shadow: 0 15px 35px rgba(215, 214, 222, 0.2);
-            width : 370px;
-            height : 230px;
-            transition: all 0.5s ease-in-out;
-            transform: translateY(-5px);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            cursor: pointer;
-        }
-
-        .card-content{
-            
-            margin: 10px;
-            border-radius: 15px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            -webkit--backdrop-filter: blur(10px);
-
-        }
-        
-        
-    </style>
+<link rel="stylesheet" href="faq.css">
 </head>
 
 <body>
@@ -408,7 +37,7 @@
             </div>
         </ul>
     </div>
-
+   
 
     <div class="row">
         <a href="mailto:example@gmail.com" target="blank">
@@ -451,8 +80,39 @@
             </div>
         </a>
 
+        
 
 
+
+
+    </div>
+    
+
+<div class="form">
+        <div class="header">
+        <h2 id="Acc">Create Account</h2>
+      </div>
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" placeholder="florinpop17" id="username" />
+          
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Email</label>
+          <input type="email" placeholder="a@florin-pop.com" id="email" />
+          
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Feedback    </label>
+          <input type="text" placeholder="Enter your Feedback" id="Feedback" style="height: 100px;"/>          
+          <small>Error message</small>
+        </div>
+
+        <button>Submit</button>
+      </form>
 
     </div>
 
