@@ -20,8 +20,8 @@ items.forEach((item) => item.addEventListener("click", togglefaq));
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
-const password = document.getElementById("password");
-const password2 = document.getElementById("password2");
+const feedback = document.getElementById("feedbacks");
+// const password2 = document.getElementById("password2");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -33,33 +33,32 @@ function checkInputs() {
   // trim to remove the whitespaces
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-  const password2Value = password2.value.trim();
-
+  const feedbackValue = feedback.value.trim();
+  // const password2Value = password2.value.trim();
+  let c = 0;
   if (usernameValue === "") {
     setErrorFor(username, "Username cannot be blank");
   } else {
     setSuccessFor(username);
+    c++;
   }
 
   if (emailValue === "") {
     setErrorFor(email, "Email cannot be blank");
   } else {
     setSuccessFor(email);
+    c++;
   }
 
-  if (passwordValue === "") {
-    setErrorFor(password, "Password cannot be blank");
+  if (feedbackValue === "") {
+    setErrorFor(feedback, "Please enter some feedback");
   } else {
-    setSuccessFor(password);
+    setSuccessFor(feedback);
+    c++;
   }
-
-  if (password2Value === "") {
-    setErrorFor(password2, "Password2 cannot be blank");
-  } else if (passwordValue !== password2Value) {
-    setErrorFor(password2, "Passwords does not match");
-  } else {
-    setSuccessFor(password2);
+  if (c == 3) {
+    alert("Thank you for your feedback !");
+    location.reload();
   }
 }
 

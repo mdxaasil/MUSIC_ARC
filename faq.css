@@ -158,14 +158,14 @@ nav ul li {
   border-style: outset;
   border-width: 5px;
   border-radius: 10px;
-  margin: -120px auto;
+  margin-top: 20px;
+  margin-left: 50px;
   size: 200px;
   padding: 2%;
   width: 75rem;
   position: absolute;
   left: 20mm;
-  bottom: -550px;
-  margin-left: 13%;
+  /* bottom: -550px; */
 }
 
 h2.black {
@@ -388,6 +388,19 @@ h2.black {
   font-size: 14px;
   padding: 10px;
   width: 90%;
+  height: 23px;
+  margin-left: 10px;
+}
+
+.form-control #feedbacks {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 90%;
+  height: 90px;
   margin-left: 10px;
 }
 
@@ -411,12 +424,12 @@ h2.black {
   right: 10px;
 }
 
-.form-control.success i.fa-check-circle {
+.form-control.success {
   color: #2ecc71;
   visibility: visible;
 }
 
-.form-control.error i.fa-exclamation-circle {
+.form-control.error {
   color: #e74c3c;
   visibility: visible;
 }
